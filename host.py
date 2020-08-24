@@ -4,8 +4,8 @@ import json
 
 app = Flask(__name__)
 
-current = 0
-step_size = 200000000
+current = 6376913898527617522
+step_size = 20000000000000
 maxX = 18446744073709552000
 fhinished = 0
 
@@ -79,7 +79,7 @@ def give_state():
 
         if fhinished > 0:
             console.log("Complete")
-            return "done"
+            return "done", 123
 
         fhinished = 1
         seedRange = maxX
@@ -87,8 +87,8 @@ def give_state():
     x = {
         "seedMin": current + 1,
         "seedMax": seedRange,
-        "x": [1, 2, 3],
-        "z": [1, 2, 3],
+        "x": [1, 3, 4, 5, 1, 3, 2, 9, 10],
+        "z": [2, 2, 0, 5, 4, 6, 6, 5, 7],
         "set": highest + 1
         # gives and id to the current set which is later check when done is called and that saves it so can later check if this set is completed
     }
