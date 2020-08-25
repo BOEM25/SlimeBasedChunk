@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-current = 6376913898527617522
+current = 0
 step_size = 20000000000000
 maxX = 18446744073709552000
 fhinished = 0
